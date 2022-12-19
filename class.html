@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Assignment</title>
+</head>
+<body>
+    <h2 id="title"> Class Assignment</h2>
+    <script>
+
+class Dispensing {
+    constructor(drug, indication) {
+        this.drug = drug;
+        this.indication = indication;
+        console.log("What medication would you like to dispense?"); 
+    }
+
+}
+
+
+class Person {
+        constructor (_name, _age) {
+            this.name = _name;
+            this.age = _age;
+        }
+
+
+     }
+
+     class Patient extends Person {
+        constructor (_name, _age,_diseaseStatus) {
+            super(_name, _age);
+
+            this.diseaseStatus = _diseaseStatus;
+            console.log("I am ${this.name} and I am ${this.age} years old.I need a medication for my ${this.diseaseStatus}");
+        }
+
+        taking () {
+            console.log('${this.name} needs to take a drug for ${this.diseaseStatus}}');
+        }
+     }
+
+     let person1 = new Person("Kris", 33);
+     let patient1 = new Patient("Jesse", 25, "mild_headache")
+     console.log(person1);
+     console.log(patient1);
+     console.log(patient1.taking());
+
+     let myDispensing1 = new Dispensing('Tylenol','mild_headache')
+     console.log(myDispensing1);
+
+    </script>
+
+
+
+</body>
+</html>
